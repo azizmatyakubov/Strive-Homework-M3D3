@@ -69,11 +69,15 @@ fetch(URL, { headers: { Authorization: API_KEY }})
 
 
 
-    //EXERCISE 2
+    //EXERCISE 3
     //The Edit button should be replaced with a "Hide" button. 
 
     
+let buttonHide = document.querySelectorAll ('hide')
 
+for (let buttonHides of buttonHide) {
+    buttonHide.innerHTML="Hide"
+}
    
 
 
