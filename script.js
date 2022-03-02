@@ -48,7 +48,7 @@ const displayCards = (pics) => {
 
 
 
-const loadSecondary = () => {}
+const loadSecondary = () => {
 
 // working 
 fetch(URL, { headers: { Authorization: API_KEY }})
@@ -60,7 +60,7 @@ fetch(URL, { headers: { Authorization: API_KEY }})
         console.log(err)
     })
 
-
+}
 
 
 
