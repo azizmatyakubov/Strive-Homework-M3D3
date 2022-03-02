@@ -1,5 +1,5 @@
 const API_KEY = '563492ad6f9170000100000101721bd9fedd4817b2ed585ad4ebc93a'
-const URL = 'https://api.pexels.com/v1/search?query=people'
+const URL = 'https://api.pexels.com/v1/search?query=[your-query]'
 
 
 // working 
@@ -12,10 +12,14 @@ fetch(URL, { headers: { Authorization: API_KEY }})
         console.log(err)
     })
 
-
+//EXERCISE 1 
     function loadImages() {
 
-        <div class="col-md-4">
+       
+        const row = document.querySelector(".row")
+
+        row.innerHTML =
+       photo.map (photo=> `<div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           <svg
             class="bd-placeholder-img card-img-top"
@@ -60,5 +64,33 @@ fetch(URL, { headers: { Authorization: API_KEY }})
             </div>
           </div>
         </div>
-      </div>
+      </div>`)
     }
+
+
+
+    //EXERCISE 2
+    //The Edit button should be replaced with a "Hide" button. 
+
+    
+
+   
+
+
+    const targetDiv = document.getElementById("column-disappear");
+const hideButton= document.getElementById("toggle");
+hideButton.onclick = function () {
+  if (targetDiv.style.display !== "none") {
+    targetDiv.style.display = "none";
+  } else {
+    targetDiv.style.display = "block";
+  }
+};
+
+
+//Exercise 5
+//Replace the "9 mins" string in the card template with the ID of the Image
+
+let newImage= document.getElementsByTagName('btn-group.small')
+
+newImage.innerText= "ID"
