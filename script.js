@@ -2,7 +2,7 @@ const API_KEY = '563492ad6f9170000100000101721bd9fedd4817b2ed585ad4ebc93a'
 
 const URL = 'https://api.pexels.com/v1/search?query=people'
 
-const URL2= 'https://api.pexels.com/v1/search?query=cats'
+const URL2= 'https://api.pexels.com/v1/search?query=dogs'
 
 const displayCards = (pics) => {
     for(let i=0; i<pics.length; i++) {
@@ -33,7 +33,7 @@ const displayCards = (pics) => {
                  Hide
                </button>
              </div>
-             <small class="text-muted">9 mins</small>
+             <small >ID: ${pics[i].id}</small>
            </div>
          </div>
        </div>
@@ -72,7 +72,7 @@ fetch(URL, { headers: { Authorization: API_KEY }})
 
 
 
-//EXERCISE 1
+//EXERCISE 1&5
 
 const displayCardsNow = (pics) => {
     for(let i=0; i<pics.length; i++) {
@@ -103,7 +103,7 @@ const displayCardsNow = (pics) => {
                  Hide
                </button>
              </div>
-             <small class="text-muted">9 mins</small>
+             <small >ID: ${pics[i].id}</small>
            </div>
          </div>
        </div>
