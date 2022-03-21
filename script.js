@@ -29,6 +29,7 @@ const displayCards = (pics) => {
                <button
                  type="button"
                  class="btn btn-sm btn-outline-secondary"
+                 onclick="removeCard(event)"
                >
                  Hide
                </button>
@@ -46,11 +47,6 @@ const displayCards = (pics) => {
 
 
 const loadSecondary = () => {
-
-
-
-
-
 
 
 
@@ -74,6 +70,12 @@ fetch(URL, { headers: { Authorization: API_KEY }})
 
 //EXERCISE 1&5
 
+
+const removeCard=(e)=> {
+e.target.closest('.col-md-4').remove();
+
+  }
+
 const displayCardsNow = (pics) => {
     for(let i=0; i<pics.length; i++) {
       let code = `
@@ -93,12 +95,15 @@ const displayCardsNow = (pics) => {
                <button
                  type="button"
                  class="btn btn-sm btn-outline-secondary"
+                 
+
                >
                  View
                </button>
                <button
                  type="button"
                  class="btn btn-sm btn-outline-secondary"
+                 onclick="removeCard(event)"
                >
                  Hide
                </button>
@@ -130,3 +135,4 @@ const loadImages = () => {
     })
 
 }
+
